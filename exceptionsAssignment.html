@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON Notation</title>
+</head>
+<body>
+    <script>
+        function reverseJsonArray(string){
+            if(typeof string === "string"){
+                const a = JSON.parse(string)
+                const b = a.reverse()
+                const c = JSON.stringify(b)
+              console.log(c);
+                
+            }
+            else {
+                console.log(false);
+            }
+        }
+
+        reverseJsonArray();
+        reverseJsonArray(true);
+        reverseJsonArray(["john", "ada", "josh"]);
+        reverseJsonArray(`["a"]`);
+        reverseJsonArray(`[]`);
+        reverseJsonArray(`["a", "b", "c", "d"]`);
+        reverseJsonArray(`["a", "b", "c", "d", "e"]`);
+        
+
+    </script>
+</body>
+</html>
